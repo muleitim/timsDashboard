@@ -1,6 +1,6 @@
 import db from '@/db/drizzle'
-import { customers, invoices } from '@/db/schema'
-import { count, sql } from 'drizzle-orm'
+import { customers, invoices, revenue } from '@/db/schema'
+import { count, desc, eq, sql } from 'drizzle-orm'
 import { formatCurrency } from '../utils'
 
 export async function fetchCardData() {
@@ -34,5 +34,43 @@ export async function fetchCardData() {
   } catch (error) {
     console.error('Database Error:', error)
     throw new Error('Failed to fetch card data.')
+  }
+}
+
+
+export async function fetchRevenue() {
+  try {
+    const data = await db.select().from(revenue)
+    return data
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to fetch the revenues.')
+  }
+}
+
+export async function fetchLatestInvoices() {
+  try {
+    const data = await db
+      .select({
+        amount: invoices.amount,
+        name: customers.name,
+        image_url: customers.image_url,
+        email: customers.email,
+        id: invoices.id,
+      })
+      .from(invoices)
+      .innerJoin(customers, eq(invoices.customer_id, customers.id))
+      .orderBy(desc(invoices.date))
+      .limit(5)
+
+    const latestInvoices = data.map((invoice) => ({
+      ...invoice,
+      amount: formatCurrency(invoice.amount),
+    }))
+
+    return latestInvoices
+  } catch (error) {
+    console.error('Database Error:', error)
+    throw new Error('Failed to fetch the latest invoices.')
   }
 }
