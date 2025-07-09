@@ -1,4 +1,4 @@
-export const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000' 
+export const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || "https://tims-dashboard-j246nmud6-timothy-muleis-projects.vercel.app"
 
 export const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || 'AdminApp'
 
