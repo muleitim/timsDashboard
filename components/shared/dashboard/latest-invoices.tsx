@@ -7,7 +7,6 @@ import { RefreshCcw } from 'lucide-react'
 
 export default async function LatestInvoices() {
   const latestInvoices = await fetchLatestInvoices();
-  console.log("\nLatest Invoices:\n", latestInvoices, "\n");
 
   return (
     <Card className="flex w-full flex-col md:col-span-4">
