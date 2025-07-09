@@ -16,37 +16,37 @@ const customers = [
     id: 'd6e15727-9fe1-4961-8c5b-ea44a9bd81aa',
     name: 'Amari Hart',
     email: 'amari@gmail.com',
-    image_url: '/customers/a1.jpg',
+    image_url: '/customers/a1.jpeg',
   },
   {
     id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
     name: 'Alexandria Brown',
     email: 'brown@gmail.com',
-    image_url: '/customers/a2.jpg',
+    image_url: '/customers/a2.jpeg',
   },
   {
     id: '3958dc9e-742f-4377-85e9-fec4b6a6442a',
     name: 'Emery Cabrera',
     email: 'emery@example.com',
-    image_url: '/customers/a3.jpg',
+    image_url: '/customers/a3.jpeg',
   },
   {
     id: '76d65c26-f784-44a2-ac19-586678f7c2f2',
     name: 'Michael Novotny',
     email: 'michael@novotny.com',
-    image_url: '/customers/a4.jpg',
+    image_url: '/customers/a4.jpeg',
   },
   {
     id: 'CC27C14A-0ACF-4F4A-A6C9-D45682C144B9',
     name: 'Lily Conrad',
     email: 'lily@yahoo.com',
-    image_url: '/customers/a5.jpg',
+    image_url: '/customers/a5.jpeg',
   },
   {
     id: '13D07535-C59E-4157-A011-F8D2EF4E0CBB',
     name: 'Ricky Mata',
     email: 'ricky@live.com',
-    image_url: '/customers/a6.jpg',
+    image_url: '/customers/a6.jpeg',
   },
 ]
 

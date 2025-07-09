@@ -6,7 +6,8 @@ import Image from 'next/image'
 import { RefreshCcw } from 'lucide-react'
 
 export default async function LatestInvoices() {
-  const latestInvoices = await fetchLatestInvoices()
+  const latestInvoices = await fetchLatestInvoices();
+  console.log("\nLatest Invoices:\n", latestInvoices, "\n");
 
   return (
     <Card className="flex w-full flex-col md:col-span-4">
@@ -36,6 +37,7 @@ export default async function LatestInvoices() {
                       className="mr-4 rounded-full"
                       width={32}
                       height={32}
+                      
                     />
                     <div className="min-w-0">
                       <p className="truncate text-sm font-semibold md:text-base">
