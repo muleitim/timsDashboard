@@ -17,6 +17,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: { children: React.ReactNode })
 {
+  
+  console.log("SERVER URL: ", SERVER_URL );
+
   return (
     <html lang='en' suppressHydrationWarning  >
       
